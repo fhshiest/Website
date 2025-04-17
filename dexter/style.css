@@ -1,0 +1,469 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.navbar_container {
+    background-color: #18151CF2;
+    padding: 10px 15px;
+    margin: 15px 15px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ffffff50;
+}
+
+.navbar_logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.navbar_first {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.navbar_second {
+    display: flex;
+    align-items: center;
+}
+
+.navbar_firstlist a {
+    text-decoration: none;
+    color: #A1A1AA;
+}
+
+.navbar_secondlist a {
+    text-decoration: none;
+    color: #A1A1AA;
+}
+
+.navbar_firstlist a:hover {
+    color: #fff;
+}
+
+.navbar_secondlist a:hover {
+    color: #fff;
+}
+
+.navbar_1list {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    font: caption;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-size: 1.1rem;
+}
+
+.navbar_2list {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 0.9rem;
+    align-items: center;
+}
+
+.navbar_discordbutton {
+    background-color: #B3A4C8E6;
+    color: #000;
+    padding: 10px 10px;
+    margin-left: 10px;
+    text-decoration: none;
+    border-style: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+}
+
+.navbar_discordbutton:hover {
+    background-color: rgb(199, 175, 231)
+}
+
+
+
+
+
+/* background */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    min-height: 100%;
+    overflow-x: hidden;
+    background-color: transparent;
+    /* keep horizontal scrolling off */
+}
+
+
+
+
+
+
+
+/* The container class for background and content */
+.background-container {
+    position: relative;
+    margin-top: 0;
+    width: 100%;
+}
+
+/* Background styles for the .background */
+.background {
+    position: absolute;
+    top: 0;
+    /* Start directly after the h1 */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom right, #B3A4C8E6, rgb(199, 175, 231));
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Dot styles for floating animation */
+.dot {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: black;
+    border-radius: 50%;
+    opacity: 0.5;
+    animation: bounce 3s infinite ease-in-out;
+}
+
+
+
+/* Color section before background (Starts at the top of the page) */
+.before-background {
+    background-color: #000000;
+    /* Your chosen color */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Ensure it covers the entire page */
+    z-index: -1;
+    /* Keep it behind the navbar and content */
+}
+
+
+.content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: #333;
+    padding-top: 20%;
+}
+/* end of background*/
+
+.netflix_icon {
+    width: 25px;
+    height: 25px;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+}
+
+
+
+/* Slideshow CSS */
+
+.carousel-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.carousel {
+    position: relative;
+    width: 75vw;
+    max-width: 600px;
+    aspect-ratio: 3 / 2;
+    /* keeps 600x400 ratio */
+    perspective: 1000px;
+}
+
+.carousel-track {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.5s ease, z-index 0.5s ease, opacity 0.5s ease;
+    transform: translateX(-50%) scale(0.8);
+    opacity: 0;
+    z-index: 0;
+}
+
+.slide.active {
+    transform: translateX(-50%) scale(1);
+    opacity: 1;
+    z-index: 3;
+}
+
+.slide.left {
+    transform: translateX(-80%) scale(0.85);
+    opacity: 0.7;
+    z-index: 2;
+}
+
+.slide.right {
+    transform: translateX(-20%) scale(0.85);
+    opacity: 0.7;
+    z-index: 2;
+}
+
+.nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2.5rem;
+    background: rgba(255, 255, 255, 0.7);
+    border: none;
+    border-radius: 10px;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 5;
+    transition: background 0.3s;
+}
+
+.nav:hover {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.nav.left {
+    left: -40px;
+}
+
+.nav.right {
+    right: -40px;
+}
+
+@media (max-width: 500px) {
+    .nav.left {
+        left: -25px;
+    }
+
+    .nav.right {
+        right: -25px;
+    }
+
+    .nav {
+        font-size: 2rem;
+        padding: 8px 12px;
+    }
+}
+
+/* End of Slideshow CSS */
+
+
+.cite_h1 {
+    font-size: medium;
+}
+
+.home_icon {
+    text-align: center;
+    padding: 10px 10px;
+}
+
+.home__icon {
+    color: #fff;
+    text-decoration: none;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    color: #B3A4C8E6;
+    margin: 0;
+}
+
+.dexter-trailer {
+    width: 90vw;
+    max-width: 800px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    display: block;
+    margin: 50px auto;
+    /* centers the video */
+}
+
+hr {
+    border: none;
+    height: 4px;
+    /* thickness */
+    background-color: black;
+    margin-top: 10px;
+    /* optional spacing */
+    border-radius: 2px;
+    /* optional rounded ends */
+}
+
+.hr1 {
+    border: none;
+    height: 0.1px;
+    /* thickness */
+    background-color: #ffffff;
+    margin-top: 10px;
+    /* optional spacing */
+    border-radius: 2px;
+    /* optional rounded ends */
+}
+
+/* profile cards */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 50px auto;
+    max-width: 1200px;
+}
+
+.profile-card {
+    width: 300px;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    background-color: #ddc0ff;
+    display: none;
+    /* Start hidden */
+}
+
+.profile-card:hover {
+    border-color: #cc00ff;
+}
+.profile-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.profile-name {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #000;
+}
+
+.card-divider {
+    height: 1px;
+    background-color: black;
+    border: none;
+    margin: 10px 0;
+}
+
+.profile-desc {
+    font-size: 0.9rem;
+    padding: 0 10px 15px;
+    color: #333;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-family: Arial, sans-serif;
+}
+
+.page-btn {
+    border: 2px solid black;
+    border-radius: 50%;
+    background-color: transparent;
+    padding: 5px 12px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background 0.2s ease;
+}
+
+.page-btn:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive: 2 per row below 900px, 1 per row below 600px */
+@media (max-width: 900px) {
+    .profile-card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 600px) {
+    .profile-card {
+        width: 90%;
+    }
+}
+
+h2 {
+    margin: 15px 15px;
+    padding: 10px 15px;
+    font-size: 3rem;
+    color: rgb(0, 0, 0);
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-family: Arial, sans-serif;
+}
+
+.page-btn {
+    border: 2px solid black;
+    border-radius: 50%;
+    background-color: transparent;
+    padding: 5px 12px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background 0.2s ease;
+}
+
+.page-btn:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+}
+
+.p1 {
+    padding: 30px 0;
+    text-align: center;
+    font-size: large;
+}
