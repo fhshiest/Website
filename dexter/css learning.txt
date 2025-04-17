@@ -1,0 +1,19 @@
+CSS NOTES
+
+* - targets everything
+display: flex; - flex means that the items can sit next to each other (inline)
+justify-content: space-between; - pushes items to the edges of the page
+align-items: center; - makes everything vertically centered
+padding: y x; - where y is vertical and x is horizontal; the distance(padding) from the inside of the item (going outward)
+color - sets the default text color
+background-color - sets the background color of the item
+font-size - changes size of text
+text-decoration - allows text to be decorated such as lines, dashed lines etc, none can be used to remove a line from a hyperlink text etc
+margin-right - changes distance to the right of the element and the next part, e.g seperating a logo from text
+list-style - changes the structure style on the list e.g bullet points, decimals etc, none removes them so there isnt any
+gap - allows you to distance between the items
+border-radius - changes the edges, rounds them
+border-style - adds a border with chosen style e.g solid for a solid border
+border-width - width of the added border
+border-color - color of the added border
+
