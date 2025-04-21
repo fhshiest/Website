@@ -1,0 +1,86 @@
+element {
+  property: value;
+}
+This is called a type selector
+
+you can also do
+element1, element2, element3 {
+  property: value;
+}
+
+if you set a class in html:
+.class-name {
+  styles
+}
+
+you can style elements nested in other elements like this
+.classname element { }
+if the parent element is setup like this
+<article class="classname">
+  <element>
+    text
+  </element>
+</article>
+
+/* This is used for comments, in code but not on page */
+
+
+
+text-align - positions the text on the page, e.g center
+
+background-color - changes the background color of elements
+background-image - sets a background image, for a url use this notation
+background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg)
+with the link being replaced, keeping the url()
+
+color - set the color of the text in an element
+
+width & height - obvious element control
+if you want to control the size of an element, e.g you dont want it to take up a page, use these!
+you can do width and height in things like px, and %, the % is relative to the parent element
+if you have 2 inline elements and want them on seperate sides you can do 50% width on each, if it doesnt go inline try 49%
+but make sure to check first that the 2 elements are seperated by nothing in the html, so like this
+<p>text</p><p>more text</p>
+no space no line nothing seperating the 2 elements, then the 50% should work
+if one of the elements content is longer, you can change the width to like 75% left 25% right, so that the left text(longer) doesnt wrap to the next line quicker
+if you have a width of something, maybe a box, set to a % like 80%, it will always take up 80% width, you can add a max-width to make it stop at some point.
+
+margin - creates space around an element (around, not inside)
+margin-left: auto;
+margin-right: auto;
+can be used together to center the element (keeps them both at equal distance from left and right)
+the centering using auto margins left & right only works for block-level elements, so if you are trying to center an image, you need to do display:block; first
+margin creates space around the element, padding creates spacing inside the element, so if you have your element in a box:
+margin-left moves the box more to the right, padding-left creates space inside the box on the left side
+padding-left, padding-right, padding-top, and padding-bottom can be used, OR:
+equal padding all around: just use padding: ;
+if you want elements closer to each other, e.g 2 p elements, you can do margin-top and margin-bottom for the p
+
+display - specifies the display behavior of an element
+
+font-family - lets you choose the font for the elements text
+some browsers may not have the font you choose to use, so you can have a fallback font, setup like this
+font-family: font1, font2, etc where font1 is the first, falls back to font2 then font3 etc if you have them
+font-style - you can make font in the element italic, bold etc, style it.
+font-size - changes size of font, units like px, rem
+
+hr - horizontal line through the page/element, abides by padding setups etc
+can adjust height, more height turns it to a box outline, you can add background-color etc
+
+you can use a pseudo-selector to change properties of a link that has been visited by a user, like how hyperlinks turn a different blue when clicked
+this is done by
+  a:visited { 
+propertyName: propertyValue;
+ }
+with the a:visited being the psuedo selector, just like the hover feature:
+a:hover {
+  propertyName: propertyValue;
+}
+for example:
+a:hover {
+  color: white;
+}
+when a link is clicked on it becomes active, we can use the pseudo-selector active like this:
+a:active {
+  color: white;
+}

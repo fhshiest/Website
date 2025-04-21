@@ -1,0 +1,34 @@
+HTML LEARNING STUFF 
+
+target="_blank" opens links in new tab
+<em>text here</em> to emphasise
+<strong>text here</strong> to bolden it a little
+
+in a form, <form action="location"></form> where action is the location where the inputted data in the form will be sent to.
+<input> has no closing tag, its just input and then inside it you put name, value
+<input type="text"> etc to say what input type it is, (could be e.g submit)
+
+<input type="text" name="catphotourl" placeholder="cat photo URL" required>
+takes text answers, has a name, a placeholder in its box, and is a required field
+
+<label><input id="indoor" type="radio" name="indoor-outdoor"> Indoor</label>
+<label><input id="outdoor" type="radio" name="indoor-outdoor"> Outdoor</label>
+give both the same name attribute so that only 1 can stay selected at a time.
+
+<fieldset> element produces a box around the form items inside it
+<legend> element is the title for the fieldset box, shown on the top of the fieldset box
+<label> wraps input and text together with radio button, so the text and the button are clickable
+type="radio" is for a radio button (a circular button selection)
+name="name" groups buttons with the same name so only 1 can be selected
+value="value" is the value that the form submits when the option is chosen
+used here for example:
+<fieldset>
+  <legend>Is your cat an indoor or outdoor cat?</legend>
+  <label><input id="indoor" type="radio" name="indoor-outdoor" value="indoor"> Indoor</label>
+  <label><input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor"> Outdoor</label>
+</fieldset>
+
+adding checked makes it checked by default
+so like <input checked type="checkbox">
+
+a void element is an element that doesnt have an open and close, just a single one, like a link element, <link ref="value" href="value">
