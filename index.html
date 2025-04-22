@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/e9358a4c81.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="payment">
+    <nav class="navbar">
+        <section class="logo">
+        <a href="/"> <img src="/Website-main/learn/space.jpg" alt="logo"></a>
+    </section>
+    <a href="/"><section class="item"><strong> <i class="fa-solid fa-cart-shopping"></i> PAYMENT</strong></section></a>
+    <section class="theme-toggle">
+        <button id="darkModeToggle" class="dark-toggle">🌙</button>
+    </section>
+    
+    </nav>
+
+    <section class="main">
+        <div class="mid">
+        <a class="button" href="/"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
+        <div class="summary">
+            <h2>Order Summary</h2>
+            <section class="line"><p class="product">Item 1</p><p class="price">£3.75</p></section>
+            <section class="line"><p class="product">Item 2</p><p class="price">£4.35</p></section>
+            <section class="line"><p class="product">Item 3</p><p class="price">£12.75</p></section>
+            <section class="line"><h3 class="product">Total</h3><h3 class="price">£29.85</h3></section>
+        </div>
+    </div>
+
+        <fieldset class="form">
+            <legend>Personal Information</legend>
+        
+            <div class="row">
+                <div class="field">
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="Forename" placeholder="e.g John" required>
+                </div>
+                <div class="field">
+                    <label for="lname">Surname</label>
+                    <input type="text" id="lname" name="Surname" placeholder="e.g Smith" required>
+                </div>
+            </div>
+        
+            <div class="row">
+                <div class="field full-width">
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob" name="dob" placeholder="DD/MM/YYYY">
+                </div>
+            </div>
+        
+            <div class="row">
+                <div class="field full-width">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+1 234 567 8900">
+                </div>
+            </div>
+        </fieldset>
+        
+        
+        <fieldset class="form">
+            <legend>Billing Information</legend>
+        
+            <div class="row">
+                <div class="field">
+                    <label for="address1">Address Line 1</label>
+                    <input type="text" id="address1" name="address1" placeholder="123 Main St" required>
+                </div>
+                <div class="field">
+                    <label for="address2">Address Line 2 <span style="font-weight: normal;">(Optional)</span></label>
+                    <input type="text" id="address2" name="address2" placeholder="Apt, Suite, etc.">
+                </div>
+            </div>
+        
+            <div class="row">
+                <div class="field">
+                    <label for="city">City</label>
+                    <input type="text" id="city" name="city" required>
+                </div>
+                <div class="field">
+                    <label for="region" id="region-label">State/Province</label>
+                    <input type="text" id="region" name="region" required>
+                </div>
+                <div class="field">
+                    <label for="zip">ZIP/Postal Code</label>
+                    <input type="text" id="zip" name="zip" required>
+                </div>
+            </div>
+        
+            <div class="row">
+                <div class="field full-width">
+                    <label for="country">Country</label>
+                    <select id="country" name="country" required>
+                        <option value="">Select Country</option>
+                        <option value="us">United States</option>
+                        <option value="uk">United Kingdom</option>
+                        <option value="ca">Canada</option>
+                        <option value="au">Australia</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+            </div>
+        </fieldset>
+
+        <div class="form-actions">
+            <button type="submit">Submit Payment</button>
+        </div>
+        
+        
+    </section>
+</div>
+
+<footer>&copy; 2025 All Right Reserved</footer>
+
+    <script src="select.js"></script>
+    <script src="darkmode.js"></script>
+</body>
+</html>
